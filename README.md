@@ -6,8 +6,9 @@ ANGULARJS
 ├── login-angular
 │   ├── node_modules
 │   ├── src
-│   ├── app
-│   ├── css
+    │   ├── app
+    │   ├── css
+    │   ├── js
 │   ├── index.html
 │   ├── package-lock.json
 │   └── package.json
