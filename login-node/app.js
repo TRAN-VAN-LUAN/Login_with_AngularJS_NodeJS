@@ -2,6 +2,7 @@ const express = require('express');
 const createError = require('http-errors');
 const cors = require('cors');
 const morgan = require('morgan');
+require('dotenv').config()
 const bodyParser = require('body-parser');
 const sequelize = require('./src/helpers/init_db.js');  // Kết nối với SQL Server
 const userRoutes = require('./src/Routes/Auth.route.js'); // Định nghĩa các routes

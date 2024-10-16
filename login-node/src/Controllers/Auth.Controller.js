@@ -12,7 +12,7 @@ module.exports = {
   register: async (req, res, next) => {
     try {
       const result = await registerSchema.validateAsync(req.body);
-
+      console.log(result)
       const doesExist = await User.findOne({ where: { email: result.email } });
       if (doesExist)
         throw createError.Conflict(`${result.email} is already been registered`);

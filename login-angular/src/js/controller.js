@@ -11,24 +11,30 @@ angular.module('loginApp', [])
 
     // Hàm đăng ký (onSignUp)
     vm.onSignUp = function () {
-      if (vm.user.name && vm.user.email && vm.user.password) {
+        if (vm.user.name && vm.user.email && vm.user.password) {
         $http.post('http://localhost:5000/api/users/register', vm.user)
-          .then(function (response) {
+            .then(function (response) {
             console.log('User registered successfully:', response.data);
             alert('Signup successful! Please log in.');
             vm.user = {
                 name: '',
                 email: '',
                 password: ''
-              };
-          })
-          .catch(function (error) {
+            };
+            })
+            .catch(function (error) {
             console.error('Signup error:', error);
-            alert('Signup failed! Please try again.');
-          });
-      } else {
+    
+            // Kiểm tra lỗi HTTP 409 (Email đã tồn tại)
+            if (error.status === 409) {
+                alert('Email already exists! Please try another email.');
+            } else {
+                alert('Signup failed! Please try again.');
+            }
+            });
+        } else {
         alert('Please fill out all the fields!');
-      }
+        }
     };
 
     // Hàm đăng nhập (onLogIn)

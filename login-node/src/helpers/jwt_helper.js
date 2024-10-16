@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 
-const secret = '123'; // Thay đổi secret key của bạn
+const secret = process.env.JWT_SECRET;
+console.log(secret)
 
 // Sign access token
 const signAccessToken = (userId) => {
