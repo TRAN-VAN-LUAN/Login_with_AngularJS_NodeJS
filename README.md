@@ -33,6 +33,5 @@ ANGULARJS
 
 ```bash
 git clone https://github.com/TRAN-VAN-LUAN/Login_with_AngularJS_NodeJS.git
-cd Login_with_AngularJS_NodeJS
 ```
 
