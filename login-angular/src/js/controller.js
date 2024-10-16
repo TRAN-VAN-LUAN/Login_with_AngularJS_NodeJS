@@ -15,7 +15,7 @@ angular.module('loginApp', [])
         $http.post('http://localhost:5000/api/users/register', vm.user)
             .then(function (response) {
             console.log('User registered successfully:', response.data);
-            alert('Signup successful! Please log in.');
+            alert('Đăng ký thành công. Vui lòng kiểm tra email để xác thực tài khoản của bạn.');
             vm.user = {
                 name: '',
                 email: '',

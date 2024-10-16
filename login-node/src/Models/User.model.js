@@ -21,6 +21,10 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: true,
   },
+  isVerified: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false, // Mặc định là chưa xác thực
+  },
   createdAt: {
     type: DataTypes.DATE,
     defaultValue: Sequelize.fn('GETDATE'), // Sử dụng SQL Server để lấy thời gian hiện tại

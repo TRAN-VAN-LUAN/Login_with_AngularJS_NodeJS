@@ -8,6 +8,9 @@ router.post('/register', authController.register);
 // Đăng nhập người dùng
 router.post('/login', authController.login);
 
+// Route để xác thực email
+router.get("/verify-email/:token", authController.verifyEmail);
+
 // Làm mới access token bằng refresh token
 router.post('/refresh-token', authController.refreshToken);
 
