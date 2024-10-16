@@ -1,0 +1,9 @@
+# Bỏ qua thư mục node_modules
+login-angular/node_modules/
+login-node/node_modules/
+
+# Bỏ qua tệp log
+*.log
+
+# Bỏ qua thư mục hệ thống
+.DS_Store
